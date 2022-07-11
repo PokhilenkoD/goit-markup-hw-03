@@ -17,6 +17,9 @@
   --main-bg-color: #fff;
 
   /* others */
+  --header-line-color: #ececec;
+  --hero-btn-hover-color: #188ce8;
+  --team-item-bg-color: #ffffff;
 }
 
 body {
@@ -52,6 +55,15 @@ p {
 
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+  padding-right: 0;
+  padding-left: 0;
 }
 
 /* base styles */
@@ -87,12 +99,13 @@ img {
 
 /*====== Header section======== */
 
+.header {
+  border-bottom: 1px solid var(--header-line-color);
+}
+
 .header-container {
   display: flex;
   align-items: center;
-  /* min-height: 80px; */
-
-  border-bottom: 1px solid #ececec;
 }
 
 .logo {
@@ -111,7 +124,7 @@ img {
 
 .header-list {
   display: flex;
-  gap: 40px;
+  gap: 50px;
 }
 
 .header-link {
@@ -138,6 +151,7 @@ img {
 .header-contacts {
   padding-top: 32px;
   padding-bottom: 32px;
+  display: block;
 
   font-weight: 500;
   line-height: calc(16 / 14);
@@ -156,15 +170,21 @@ img {
 
 .hero {
   background-color: var(--dark-bg-color);
-}
-
-.hero-container {
   padding-top: 200px;
   padding-bottom: 200px;
+  padding-right: 0;
+  padding-left: 0;
   text-align: center;
 }
 
 .hero-title {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+
+  width: 696px;
   font-family: 'Roboto';
   font-weight: 900;
   font-size: 44px;
@@ -179,6 +199,11 @@ img {
   display: flex;
   margin-left: auto;
   margin-right: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 32px;
+  padding-left: 32px;
+  border: none;
 
   font-family: 'Roboto';
   font-weight: 700;
@@ -196,13 +221,9 @@ img {
 
 .hero-btn:hover,
 .hero-btn:focus {
-  background-color: #188ce8;
+  background-color: var(--hero-btn-hover-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
-}
-.benefits-container {
-  padding-top: 94px;
-  padding-bottom: 94px;
 }
 
 .benefits-list-container {
@@ -215,6 +236,7 @@ img {
 
 .advantages-title {
   line-height: calc(16 / 14);
+  font-size: 14px;
   text-transform: uppercase;
   color: var(--main-txt-color);
 }
@@ -222,6 +244,10 @@ img {
 .advantages-uppertitle {
   line-height: calc(24 / 14);
   color: var(--paragraph-txt-color);
+}
+
+.about {
+  padding-top: 0;
 }
 
 .about-list-container {
@@ -241,11 +267,6 @@ img {
   background-color: var(--light-bg-color);
 }
 
-.team-container {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
-
 .team-title {
   margin-bottom: 50px;
 
@@ -259,14 +280,19 @@ img {
   gap: 30px;
 }
 
-.team-item-container {
-  padding-top: 30px;
-  padding-right: 59px;
-  padding-bottom: 59px;
-  padding-left: 60px;
+.team-item {
+  background: var(--team-item-bg-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+}
+
+.team-item-container {
+  padding-top: 30px;
+  padding-right: 59px;
+  padding-bottom: 30px;
+  padding-left: 60px;
+  text-align: center;
 }
 
 .team-item-uppertitle {
@@ -275,13 +301,11 @@ img {
   font-weight: 500;
   font-size: 16px;
   line-height: calc(19 / 16);
-  text-align: center;
-  width: 151px;
 }
 
 .team-item-txt {
+  font-size: 14px;
   line-height: calc(19 / 16);
-  text-align: center;
   color: var(--paragraph-txt-color);
 }
 
@@ -292,10 +316,8 @@ img {
 /* ========Footer====== */
 .footer {
   background-color: var(--dark-bg-color);
-}
-
-.footer-container {
   padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .logo-accent-footer {
@@ -305,19 +327,14 @@ img {
 .logo-footer {
   display: block;
   margin-bottom: 20px;
+  margin-right: 0;
 }
 
-.addres {
-  padding-bottom: 60px;
-
+.addres-item {
   font-style: normal;
   font-weight: 400;
   line-height: calc(24 / 14);
   color: var(--addres-txt-color);
-}
-
-.addres-list {
-  width: 231px;
 }
 
 .addres-item:not(:last-child) {
@@ -333,10 +350,6 @@ img {
 ===========Portfolio========== 
 ===========================*/
 
-.portfolio-container {
-  padding-top: 94px;
-}
-
 .portfolio-filter-container {
   display: flex;
   justify-content: center;
@@ -345,6 +358,11 @@ img {
 }
 
 .portfolio-filter-btn {
+  padding-top: 6px;
+  padding-right: 22px;
+  padding-bottom: 6px;
+  padding-left: 22px;
+
   font-weight: 500;
   font-size: 16px;
   line-height: calc(26 / 16);
@@ -352,6 +370,10 @@ img {
   background-color: var(--light-bg-color);
   cursor: pointer;
   font-family: var(--main-font);
+  border: none;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
 }
 
 .portfolio-filter-btn-accent {
