@@ -235,6 +235,8 @@ img {
 }
 
 .advantages-title {
+  margin-bottom: 10px;
+
   line-height: calc(16 / 14);
   font-size: 14px;
   text-transform: uppercase;
@@ -289,9 +291,7 @@ img {
 
 .team-item-container {
   padding-top: 30px;
-  padding-right: 59px;
   padding-bottom: 30px;
-  padding-left: 60px;
   text-align: center;
 }
 
@@ -304,7 +304,7 @@ img {
 }
 
 .team-item-txt {
-  font-size: 14px;
+  font-size: 16px;
   line-height: calc(19 / 16);
   color: var(--paragraph-txt-color);
 }
